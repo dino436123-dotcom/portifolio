@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 980" role="img" aria-labelledby="title desc">
+  <title id="title">Orla — estudo de interface fictício para café</title>
+  <desc id="desc">Página escura de um café de origem com tipografia clara, detalhes em laranja e uma ilustração gráfica de uma xícara de café.</desc>
+  <rect width="1200" height="980" fill="#29251f"/>
+  <rect x="0" y="0" width="1200" height="74" fill="#24211c"/>
+  <text x="72" y="45" fill="#f0eadf" font-family="Georgia,serif" font-size="27" font-style="italic">orla.</text>
+  <text x="690" y="42" fill="#c8c0b2" font-family="Arial,sans-serif" font-size="10" letter-spacing="1.5">NOSSO CAFÉ</text>
+  <text x="815" y="42" fill="#c8c0b2" font-family="Arial,sans-serif" font-size="10" letter-spacing="1.5">DE ONDE VEM</text>
+  <text x="967" y="42" fill="#c8c0b2" font-family="Arial,sans-serif" font-size="10" letter-spacing="1.5">ENCONTRE A ORLA</text>
+  <path d="M72 73h1056" stroke="#4b453a"/>
+  <text x="75" y="158" fill="#d1a56b" font-family="Arial,sans-serif" font-size="10" letter-spacing="2.5">CAFÉ DE ORIGEM · TORRA PEQUENA</text>
+  <text x="72" y="279" fill="#f3eee4" font-family="Georgia,serif" font-size="88" letter-spacing="-5">Seu tempo,</text>
+  <text x="72" y="366" fill="#f3eee4" font-family="Georgia,serif" font-size="88" font-style="italic" letter-spacing="-5">bem passado.</text>
+  <text x="78" y="432" fill="#c2bbae" font-family="Arial,sans-serif" font-size="14">Grãos especiais, escolhidos perto de onde nascem.</text>
+  <text x="78" y="456" fill="#c2bbae" font-family="Arial,sans-serif" font-size="14">Para fazer a pausa valer o caminho.</text>
+  <rect x="78" y="507" width="169" height="48" fill="#d5a36a"/>
+  <text x="101" y="536" fill="#29251f" font-family="Arial,sans-serif" font-size="11" letter-spacing=".8">DESCUBRA A ORLA</text>
+  <path d="M221 531h11m-4-4 4 4-4 4" fill="none" stroke="#29251f" stroke-width="1.2"/>
+  <g transform="translate(660 151)">
+    <circle cx="247" cy="263" r="236" fill="#383228"/>
+    <circle cx="247" cy="263" r="195" fill="#d5a36a"/>
+    <circle cx="247" cy="263" r="169" fill="#44352a"/>
+    <path d="M155 204h193v155c0 45-36 81-81 81h-31c-45 0-81-36-81-81Z" fill="#eee5d7"/>
+    <path d="M347 231h39c36 0 55 27 55 58s-19 59-55 59h-42" fill="none" stroke="#eee5d7" stroke-width="24"/>
+    <ellipse cx="252" cy="206" rx="96" ry="24" fill="#886148"/>
+    <path d="M208 207c22-25 67-31 96-5-14 36-51 48-89 33" fill="#d5a36a" opacity=".88"/>
+    <path d="M142 452h249" stroke="#d5a36a" stroke-width="3"/>
+    <path d="M190 117c-17-22-14-47 3-64m44 56c-13-23-11-45 5-64m42 66c-11-22-8-44 6-59" fill="none" stroke="#e4d7c4" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+    <circle cx="91" cy="122" r="6" fill="#d5a36a"/><circle cx="400" cy="121" r="4" fill="#d5a36a"/>
+    <path d="m81 379 23 7-23 7m344-3 23 7-23 7" fill="none" stroke="#d5a36a" stroke-width="2"/>
+  </g>
+  <path d="M72 822h1056" stroke="#4b453a"/>
+  <text x="76" y="868" fill="#c2bbae" font-family="Arial,sans-serif" font-size="10" letter-spacing="1.7">PEQUENOS LOTES · GRANDES HISTÓRIAS</text>
+  <text x="1008" y="868" fill="#c2bbae" font-family="Arial,sans-serif" font-size="10" letter-spacing="1.7">CONCEITO 02</text>
+  <text x="76" y="920" fill="#d5a36a" font-family="Georgia,serif" font-size="25" font-style="italic">Café com origem e sem pressa.</text>
+</svg>

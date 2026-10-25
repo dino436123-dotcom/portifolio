@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 850" role="img" aria-labelledby="title desc">
+  <title id="title">Estudo visual de arquitetura</title>
+  <desc id="desc">Página conceitual de arquitetura com tipografia editorial e formas geométricas inspiradas em um pátio iluminado pelo sol.</desc>
+  <rect width="950" height="850" fill="#d8d3c5"/>
+  <rect x="0" y="0" width="950" height="70" fill="#f6f4ef"/>
+  <text x="52" y="43" fill="#34362e" font-family="Georgia,serif" font-size="22" font-style="italic">vão.</text>
+  <text x="592" y="42" fill="#717267" font-family="Arial,sans-serif" font-size="9" letter-spacing="1.2">ESTUDO CONCEITUAL · FICTÍCIO</text>
+  <text x="690" y="42" fill="#717267" font-family="Arial,sans-serif" font-size="9" letter-spacing="1.4">PROJETOS</text>
+  <text x="800" y="42" fill="#717267" font-family="Arial,sans-serif" font-size="9" letter-spacing="1.4">CONTATO</text>
+  <text x="58" y="146" fill="#707164" font-family="Arial,sans-serif" font-size="9" letter-spacing="2">ARQUITETURA E INTERIORES</text>
+  <text x="54" y="238" fill="#292b25" font-family="Georgia,serif" font-size="71" letter-spacing="-4">Espaço para</text>
+  <text x="54" y="309" fill="#292b25" font-family="Georgia,serif" font-size="71" font-style="italic" letter-spacing="-4">viver melhor.</text>
+  <text x="60" y="365" fill="#5d5f55" font-family="Arial,sans-serif" font-size="12">Um outro jeito de habitar, começando</text>
+  <text x="60" y="385" fill="#5d5f55" font-family="Arial,sans-serif" font-size="12">com atenção ao que já importa.</text>
+  <rect x="60" y="423" width="157" height="42" fill="#484d3e"/>
+  <text x="79" y="449" fill="#f6f4ef" font-family="Arial,sans-serif" font-size="9" letter-spacing=".8">CONHEÇA O ESTÚDIO</text>
+  <rect x="475" y="115" width="423" height="574" fill="#b6ae9d"/>
+  <path d="M475 543 576 476l91 47 93-91 138 72v185H475Z" fill="#8d9078"/>
+  <path d="M535 340 678 220l158 120v231H535Z" fill="#c0ae93"/>
+  <path d="m535 340 143-120 158 120" fill="none" stroke="#ece8de" stroke-width="7"/>
+  <rect x="572" y="365" width="74" height="206" fill="#626954"/>
+  <rect x="698" y="363" width="116" height="86" fill="#e3ded1"/>
+  <rect x="698" y="466" width="116" height="105" fill="#777b61"/>
+  <circle cx="818" cy="205" r="36" fill="#ead4a8"/>
+  <path d="M808 611c10-85 37-118 66-120 20 27 30 65 31 120" fill="#70745b"/>
+  <path d="M831 625c-18-43-43-65-74-68 10 48 37 77 74 68Zm42-25c15-49 40-77 73-82-7 58-42 91-73 82Z" fill="#878a70"/>
+  <path d="M840 685v-71" stroke="#585e49" stroke-width="7"/>
+  <text x="58" y="748" fill="#76766b" font-family="Arial,sans-serif" font-size="9" letter-spacing="1.7">ESTUDO VISUAL Nº 01</text>
+  <text x="58" y="797" fill="#34362e" font-family="Georgia,serif" font-size="20" font-style="italic">A luz também faz parte do projeto.</text>
+  <text x="831" y="748" fill="#76766b" font-family="Arial,sans-serif" font-size="9" letter-spacing="1.5">01 / 03</text>
+</svg>

@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ee">
+  <meta name="description" content="Arquitetura residencial contemporânea e interiores sob medida. Um processo claro, pensado para a sua maneira de viver.">
+  <title>Ateliê Vão — Arquitetura e interiores</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f5f3ee;
+      --paper-deep: #ebe8df;
+      --ink: #272821;
+      --muted: #62635b;
+      --line: #d9d7ce;
+      --olive: #6e725a;
+      --olive-dark: #4e5341;
+      --section-space: 116px;
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", Arial, sans-serif;
+      --display: "Manrope", Arial, sans-serif;
+      --page: min(1440px, calc(100% - 112px));
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+    body, button, input, select, textarea { font-family: var(--sans); }
+    a { color: inherit; text-decoration: none; }
+    button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+    img { display: block; width: 100%; }
+    ::selection { background: #c9cbb8; color: var(--ink); }
+    :focus-visible { outline: 2px solid var(--olive-dark); outline-offset: 4px; }
+
+    .page-width { width: var(--page); margin-inline: auto; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 12px; color: var(--muted); font-size: 10px; font-weight: 600; letter-spacing: .17em; line-height: 1.5; text-transform: uppercase; }
+    .eyebrow::before { width: 23px; height: 1px; background: currentColor; content: ""; }
+    .serif { font-family: var(--serif); font-weight: 400; }
+    .section-heading { max-width: 710px; margin: 22px 0 0; font-family: var(--display); font-size: clamp(34px, 4.5vw, 61px); font-weight: 400; letter-spacing: -.055em; line-height: 1.08; }
+    .section-heading em { font-family: var(--serif); font-weight: 400; }
+    .section-copy { max-width: 460px; color: var(--muted); font-size: 15px; line-height: 1.8; }
+    .arrow-link { display: inline-flex; align-items: center; gap: 12px; font-size: 12px; font-weight: 600; letter-spacing: .04em; transition: gap .2s ease; }
+    .arrow-link:hover { gap: 18px; }
+    .arrow-link svg { width: 16px; height: 16px; }
+
+    /* Header */
+    .site-header { position: relative; z-index: 5; border-bottom: 1px solid rgba(39, 40, 33, .1); }
+    .header-inner { width: var(--page); height: 88px; margin-inline: auto; display: flex; align-items: center; justify-content: space-between; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; }
+    .brand-symbol { position: relative; width: 28px; height: 30px; display: block; }
+    .brand-symbol::before, .brand-symbol::after { position: absolute; bottom: 3px; width: 8px; border: 1px solid var(--ink); border-bottom: 0; content: ""; }
+    .brand-symbol::before { left: 3px; height: 23px; border-radius: 7px 0 0 0; }
+    .brand-symbol::after { right: 3px; height: 17px; border-left: 0; border-radius: 0 7px 0 0; }
+    .brand-word { font-family: var(--display); font-size: 19px; font-weight: 600; letter-spacing: -.07em; }
+    .brand-word span { font-family: var(--serif); font-size: 20px; font-weight: 400; }
+    .brand-caption { display: block; margin-top: 2px; color: var(--muted); font-size: 9px; letter-spacing: .15em; text-transform: uppercase; }
+    .main-nav { display: flex; align-items: center; gap: clamp(24px, 3.1vw, 49px); }
+    .main-nav a { color: #55564f; font-size: 11px; transition: color .2s ease; }
+    .main-nav a:hover { color: var(--ink); }
+    .header-cta { display: inline-flex; align-items: center; gap: 11px; font-size: 11px; font-weight: 600; }
+    .header-cta svg { width: 15px; height: 15px; }
+    .menu-toggle { display: none; width: 42px; height: 42px; align-items: center; justify-content: center; border: 1px solid var(--line); background: transparent; color: var(--ink); }
+    .menu-toggle svg { width: 18px; height: 18px; }
+
+    /* Hero */
+    .hero { padding: 42px 0 0; }
+    .hero-layout { display: grid; grid-template-columns: minmax(400px, .87fr) minmax(0, 1.13fr); min-height: 590px; }
+    .hero-copy { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 38px 6vw 56px 0; }
+    .hero-kicker { margin-bottom: 28px; }
+    .hero-title { max-width: 660px; margin: 0; font-family: var(--display); font-size: clamp(54px, 6.55vw, 91px); font-weight: 400; letter-spacing: -.075em; line-height: .99; }
+    .hero-title em { font-family: var(--serif); font-size: .99em; letter-spacing: -.06em; }
+    .hero-intro { max-width: 422px; margin: 29px 0 0; color: var(--muted); font-size: 14px; line-height: 1.85; }
+    .hero-actions { display: flex; align-items: center; gap: 28px; margin-top: 33px; }
+    .button-primary { display: inline-flex; min-height: 51px; align-items: center; justify-content: center; gap: 14px; padding: 0 20px; background: var(--olive-dark); color: #fff; font-size: 11px; font-weight: 600; letter-spacing: .035em; transition: background .2s ease, transform .2s ease; }
+    .button-primary:hover { background: #3e4234; transform: translateY(-2px); }
+    .button-primary svg { width: 16px; height: 16px; }
+    .text-link { display: inline-flex; align-items: center; gap: 9px; font-size: 11px; font-weight: 600; }
+    .text-link svg { width: 14px; height: 14px; }
+    .hero-visual { position: relative; min-height: 530px; overflow: hidden; background: #d9d2c5; }
+    .hero-visual > img { position: absolute; inset: 0; height: 100%; object-fit: cover; object-position: center; }
+    .image-index { position: absolute; z-index: 1; top: 20px; left: 20px; padding: 8px 10px; background: rgba(245, 243, 238, .9); color: #56574f; font-size: 10px; letter-spacing: .13em; text-transform: uppercase; }
+    .hero-image-caption { position: absolute; z-index: 1; right: 16px; bottom: 16px; left: 16px; display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; padding: 14px 16px; background: rgba(39, 40, 33, .84); color: #fff; }
+    .hero-image-caption strong { max-width: 260px; font-family: var(--serif); font-size: 22px; font-weight: 400; line-height: 1.25; }
+    .hero-image-caption span { font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
+    .hero-foot { display: flex; align-items: center; justify-content: space-between; padding: 21px 0 25px; border-bottom: 1px solid var(--line); }
+    .hero-foot-label { color: var(--muted); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; }
+    .hero-foot-list { display: flex; gap: clamp(20px, 5vw, 75px); color: #55564e; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
+
+    /* Intro / point of view */
+    .intro { display: grid; grid-template-columns: .8fr 1.2fr; gap: 10vw; align-items: start; padding-block: var(--section-space) 108px; }
+    .intro-aside { padding-top: 9px; }
+    .intro-aside p { max-width: 250px; margin: 20px 0 0; color: var(--muted); font-family: var(--serif); font-size: 19px; line-height: 1.55; }
+    .intro-main .section-heading { max-width: 765px; margin-top: 0; font-size: clamp(38px, 5vw, 67px); }
+    .intro-main .section-copy { max-width: 470px; margin: 27px 0 0; }
+    .intro-note { display: flex; align-items: center; gap: 15px; margin-top: 42px; color: #62635b; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
+    .intro-note span { width: 34px; height: 1px; background: var(--olive); }
+
+    /* Work */
+    .work-section { padding: 96px 0 108px; background: var(--paper-deep); }
+    .work-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; margin-bottom: 46px; }
+    .work-head .section-heading { max-width: 670px; margin-top: 18px; }
+    .work-head .section-copy { max-width: 320px; margin: 0 0 5px; }
+    .work-grid { display: grid; grid-template-columns: 1.07fr .93fr; gap: 23px; align-items: start; }
+    .work-card:nth-child(2) { margin-top: 105px; }
+    .work-image { position: relative; overflow: hidden; background: #d2cbbf; }
+    .work-card:first-child .work-image { aspect-ratio: 1.19 / 1; }
+    .work-card:nth-child(2) .work-image { aspect-ratio: .99 / 1; }
+    .work-image img { height: 100%; object-fit: cover; transition: transform .8s cubic-bezier(.2,.7,.2,1); }
+    .work-card:hover .work-image img { transform: scale(1.035); }
+    .work-label { position: absolute; top: 16px; left: 16px; padding: 8px 10px; background: rgba(245,243,238,.9); color: #5d5e55; font-size: 10px; letter-spacing: .13em; text-transform: uppercase; }
+    .work-meta { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; padding-top: 17px; }
+    .work-meta h3 { margin: 0; font-family: var(--serif); font-size: 22px; font-weight: 400; }
+    .work-meta p { margin: 5px 0 0; color: var(--muted); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
+    .work-number { color: var(--muted); font-size: 10px; }
+    .work-disclaimer { margin: 33px 0 0; color: var(--muted); font-size: 10px; line-height: 1.7; }
+
+    /* Services */
+    .services { padding-block: var(--section-space) 116px; }
+    .services-top { display: grid; grid-template-columns: 1fr .75fr; gap: 11vw; align-items: end; margin-bottom: 58px; }
+    .services-top .section-heading { max-width: 700px; }
+    .services-top .section-copy { margin: 0 0 5px; }
+    .service-list { border-top: 1px solid var(--line); }
+    .service-row { display: grid; grid-template-columns: 64px minmax(190px, .72fr) 1fr; gap: 24px; align-items: center; min-height: 123px; border-bottom: 1px solid var(--line); }
+    .service-number { color: var(--muted); font-family: var(--serif); font-size: 17px; }
+    .service-row h3 { margin: 0; font-family: var(--serif); font-size: 27px; font-weight: 400; }
+    .service-row p { max-width: 460px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.75; }
+
+    /* Process */
+    .process-section { padding: 100px 0 108px; background: #e6e5dc; }
+    .process-layout { display: grid; grid-template-columns: .78fr 1.22fr; gap: 12vw; }
+    .process-intro { position: sticky; top: 35px; align-self: start; }
+    .process-intro .section-heading { max-width: 440px; }
+    .process-intro .section-copy { max-width: 350px; margin-top: 23px; }
+    .process-steps { border-top: 1px solid #c9c9bd; }
+    .process-step { display: grid; grid-template-columns: 52px 1fr; gap: 22px; padding: 30px 0 32px; border-bottom: 1px solid #c9c9bd; }
+    .process-step > span { color: var(--olive-dark); font-family: var(--serif); font-size: 17px; }
+    .process-step h3 { margin: 0; font-family: var(--serif); font-size: 25px; font-weight: 400; }
+    .process-step p { max-width: 460px; margin: 10px 0 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+
+    /* Contact */
+    .contact-section { padding-block: var(--section-space) 108px; }
+    .contact-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 12vw; }
+    .contact-intro .section-heading { max-width: 520px; }
+    .contact-intro .section-copy { max-width: 370px; margin-top: 23px; }
+    .contact-detail { margin-top: 47px; padding-top: 21px; border-top: 1px solid var(--line); }
+    .contact-detail span { color: var(--muted); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; }
+    .contact-detail p { margin: 9px 0 0; font-family: var(--serif); font-size: 20px; }
+    .contact-form { padding-top: 4px; }
+    .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 21px; }
+    .field { display: flex; flex-direction: column; gap: 10px; margin-bottom: 23px; }
+    .field label { color: #5c5d55; font-size: 10px; font-weight: 600; letter-spacing: .07em; }
+    .field input, .field select, .field textarea { width: 100%; border: 0; border-bottom: 1px solid #85867e; border-radius: 0; background: transparent; color: var(--ink); font-size: 13px; transition: border-color .2s ease; }
+    .field input, .field select { height: 37px; }
+    .field textarea { min-height: 85px; padding-block: 9px; resize: vertical; }
+    .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--olive-dark); }
+    .field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { outline: 2px solid var(--olive-dark); outline-offset: 3px; }
+    .field input::placeholder, .field textarea::placeholder { color: var(--muted); }
+    .form-bottom { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-top: 4px; }
+    .form-note { max-width: 220px; margin: 0; color: var(--muted); font-size: 10px; line-height: 1.65; }
+    .form-status { min-height: 20px; margin: 16px 0 0; color: var(--olive-dark); font-size: 11px; }
+
+    /* Footer */
+    .site-footer { padding: 29px 0 25px; border-top: 1px solid var(--line); }
+    .footer-top { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+    .footer-links { display: flex; align-items: center; gap: 27px; color: #62635b; font-size: 10px; }
+    .footer-bottom { display: flex; justify-content: space-between; gap: 20px; margin-top: 28px; color: var(--muted); font-size: 10px; }
+    .prototype-note { margin: 13px 0 0; color: var(--muted); font-size: 10px; line-height: 1.6; }
+
+    @media (min-width: 1600px) { :root { --page: min(1440px, calc(100% - 160px)); } }
+    @media (max-width: 980px) {
+      :root { --page: calc(100% - 64px); }
+      .hero-layout { grid-template-columns: .95fr 1.05fr; min-height: 510px; }
+      .hero-visual { min-height: 480px; }
+      .hero-copy { padding-right: 35px; }
+      .hero-title { font-size: clamp(52px, 7vw, 72px); }
+      .intro { gap: 6vw; }
+      .work-head { align-items: flex-start; }
+      .work-head .section-copy { max-width: 270px; }
+      .services-top { gap: 7vw; }
+      .process-layout, .contact-layout { gap: 7vw; }
+    }
+    @media (max-width: 720px) {
+      :root { --page: calc(100% - 40px); }
+      html { scroll-padding-top: 72px; }
+      .header-inner { height: 72px; }
+      .main-nav { position: absolute; top: 71px; right: 0; left: 0; display: none; flex-direction: column; align-items: stretch; gap: 0; padding: 8px 20px 18px; border-bottom: 1px solid var(--line); background: var(--paper); }
+      .main-nav.is-open { display: flex; }
+      .main-nav a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
+      .header-cta { margin-left: auto; margin-right: 16px; font-size: 10px; }
+      .header-cta svg { width: 14px; height: 14px; }
+      .menu-toggle { display: inline-flex; }
+      .hero { padding-top: 18px; }
+      .hero-layout { grid-template-columns: 1fr; min-height: auto; }
+      .hero-copy { padding: 44px 0 38px; }
+      .hero-kicker { margin-bottom: 23px; }
+      .hero-title { max-width: 550px; font-size: clamp(56px, 12.6vw, 82px); }
+      .hero-intro { margin-top: 21px; font-size: 13px; }
+      .hero-actions { gap: 20px; margin-top: 25px; }
+      .button-primary { min-height: 48px; padding-inline: 14px; font-size: 10px; }
+      .text-link { font-size: 10px; }
+      .hero-visual { min-height: 395px; }
+      .hero-image-caption strong { font-size: 20px; }
+      .hero-foot { align-items: flex-start; gap: 14px; padding-block: 17px 19px; }
+      .hero-foot-label { max-width: 100px; line-height: 1.6; }
+      .hero-foot-list { justify-content: flex-end; flex-wrap: wrap; gap: 8px 18px; max-width: 230px; font-size: 8px; }
+      .intro { grid-template-columns: 1fr; gap: 38px; padding-block: 83px; }
+      .intro-aside p { max-width: 310px; font-size: 17px; }
+      .intro-main .section-heading { font-size: clamp(39px, 9.6vw, 58px); }
+      .intro-main .section-copy { margin-top: 21px; font-size: 13px; }
+      .intro-note { margin-top: 29px; font-size: 8px; }
+      .work-section { padding-block: 80px 84px; }
+      .work-head { display: block; margin-bottom: 31px; }
+      .work-head .section-heading { font-size: clamp(39px, 9.6vw, 58px); }
+      .work-head .section-copy { max-width: 400px; margin-top: 19px; font-size: 13px; }
+      .work-grid { grid-template-columns: 1fr; gap: 29px; }
+      .work-card:nth-child(2) { margin-top: 0; }
+      .work-card:first-child .work-image, .work-card:nth-child(2) .work-image { aspect-ratio: 1.18 / 1; }
+      .work-meta h3 { font-size: 20px; }
+      .work-disclaimer { margin-top: 25px; }
+      .services-top { grid-template-columns: 1fr; gap: 18px; margin-bottom: 34px; }
+      .services-top .section-heading { font-size: clamp(39px, 9.6vw, 58px); }
+      .services-top .section-copy { font-size: 13px; }
+      .service-row { grid-template-columns: 32px 1fr; gap: 12px; padding-block: 21px; }
+      .service-number { align-self: start; padding-top: 4px; font-size: 15px; }
+      .service-row h3 { font-size: 22px; }
+      .service-row p { grid-column: 2 / 3; grid-row: 2; font-size: 11px; }
+      .services { padding-block: 76px 80px; }
+      .process-section { padding-block: 81px 83px; }
+      .process-layout { grid-template-columns: 1fr; gap: 36px; }
+      .process-intro { position: static; }
+      .process-intro .section-heading { font-size: clamp(39px, 9.6vw, 58px); }
+      .process-intro .section-copy { margin-top: 18px; font-size: 13px; }
+      .process-step { grid-template-columns: 34px 1fr; gap: 12px; padding-block: 23px 24px; }
+      .process-step h3 { font-size: 22px; }
+      .process-step p { font-size: 11px; }
+      .contact-layout { grid-template-columns: 1fr; gap: 42px; }
+      .contact-section { padding-block: 80px 84px; }
+      .contact-intro .section-heading { font-size: clamp(39px, 9.6vw, 58px); }
+      .contact-intro .section-copy { font-size: 13px; }
+      .contact-detail { margin-top: 30px; }
+      .field-row { gap: 15px; }
+      .field { margin-bottom: 20px; }
+      .form-bottom { align-items: flex-start; flex-direction: column-reverse; }
+      .form-note { max-width: 300px; }
+      .footer-top { align-items: flex-start; flex-direction: column; gap: 22px; }
+      .footer-links { flex-wrap: wrap; gap: 13px 22px; }
+      .footer-bottom { flex-direction: column; gap: 8px; }
+    }
+    @media (max-width: 390px) {
+      :root { --page: calc(100% - 32px); }
+      .header-cta { gap: 7px; font-size: 9px; }
+      .brand-word { font-size: 17px; }
+      .hero-actions { align-items: flex-start; flex-direction: column; }
+      .hero-visual { min-height: 330px; }
+      .field-row { grid-template-columns: 1fr; gap: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#inicio" aria-label="Ateliê Vão, início">
+        <span class="brand-symbol" aria-hidden="true"></span>
+        <span><span class="brand-word">ateliê <span>vão</span></span><span class="brand-caption">arquitetura & interiores</span></span>
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+        <a href="#sobre">O estúdio</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#servicos">Como podemos ajudar</a>
+        <a href="#processo">Processo</a>
+      </nav>
+      <a class="header-cta" href="#contato" aria-label="Ir ao formulário de orçamento">
+        <span>Vamos conversar</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero page-width" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-layout">
+        <div class="hero-copy">
+          <span class="eyebrow hero-kicker">Arquitetura feita para a vida real</span>
+        <h1 class="hero-title" id="hero-title">Seu jeito de viver <em>desenha a casa.</em></h1>
+          <p class="hero-intro">Projetos residenciais e interiores sob medida, desenhados a partir do seu jeito de viver — com beleza, função e clareza em cada escolha.</p>
+          <div class="hero-actions">
+            <a class="button-primary" href="#contato">
+              <span>Conte sobre seu projeto</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+            <a class="text-link" href="#projetos">Ver referências <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 5v14m-7-7 7 7 7-7"/></svg></a>
+          </div>
+        </div>
+        <figure class="hero-visual">
+          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=900&amp;q=88" srcset="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=600&amp;q=88 600w, https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=900&amp;q=88 900w, https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=1200&amp;q=88 1200w, https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=1800&amp;q=88 1800w" sizes="(max-width: 720px) calc(100vw - 40px), (max-width: 980px) 52vw, (max-width: 1600px) 46vw, 40vw" alt="Sala contemporânea com materiais naturais, madeira e luz suave" width="1800" height="1350" fetchpriority="high" decoding="async">
+          <span class="image-index">Imagem de referência</span>
+          <figcaption class="hero-image-caption"><strong>Calma, textura<br>e luz natural.</strong><span>Arquitetura residencial</span></figcaption>
+        </figure>
+      </div>
+      <div class="hero-foot">
+        <span class="hero-foot-label">Nosso olhar começa por</span>
+        <div class="hero-foot-list"><span>Escuta</span><span>Intenção</span><span>Materialidade</span><span>Vida cotidiana</span></div>
+      </div>
+    </section>
+
+    <section class="intro page-width" id="sobre" aria-labelledby="intro-title">
+      <aside class="intro-aside">
+        <span class="eyebrow">01 — O estúdio</span>
+        <p>Projetos residenciais contemporâneos e interiores sob medida.</p>
+      </aside>
+      <div class="intro-main">
+        <h2 class="section-heading" id="intro-title">Escuta antes <em>do desenho.</em></h2>
+        <p class="section-copy">Antes de definir materiais ou formas, entendemos sua rotina, suas referências e prioridades. A partir daí, cada decisão busca equilibrar identidade, função e clareza.</p>
+        <div class="intro-note"><span aria-hidden="true"></span>Arquitetura e interiores, em diálogo com você</div>
+      </div>
+    </section>
+
+    <section class="work-section" id="projetos" aria-labelledby="work-title">
+      <div class="page-width">
+        <div class="work-head">
+          <div><span class="eyebrow">02 — Atmosferas</span><h2 class="section-heading" id="work-title">Matéria, luz e <em>pertencimento.</em></h2></div>
+          <p class="section-copy">Cada casa conta uma história diferente. O projeto encontra a linguagem que faz sentido para a sua.</p>
+        </div>
+        <div class="work-grid">
+          <article class="work-card">
+            <div class="work-image"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=768&amp;q=85" srcset="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=480&amp;q=85 480w, https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=768&amp;q=85 768w, https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=1024&amp;q=85 1024w, https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=1300&amp;q=85 1300w" sizes="(max-width: 720px) calc(100vw - 40px), (max-width: 980px) 52vw, (max-width: 1600px) 48vw, 40vw" alt="Interior contemporâneo com integração entre sala e área externa" width="1300" height="884" loading="lazy" decoding="async"><span class="work-label">Imagem de referência</span></div>
+            <div class="work-meta"><div><h3>Dentro e fora, em equilíbrio</h3><p>Arquitetura residencial · luz e integração</p></div><span class="work-number">01</span></div>
+          </article>
+          <article class="work-card">
+            <div class="work-image"><img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&amp;fit=crop&amp;w=768&amp;q=85" srcset="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&amp;fit=crop&amp;w=480&amp;q=85 480w, https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&amp;fit=crop&amp;w=768&amp;q=85 768w, https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&amp;fit=crop&amp;w=960&amp;q=85 960w, https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&amp;fit=crop&amp;w=1200&amp;q=85 1200w" sizes="(max-width: 720px) calc(100vw - 40px), (max-width: 980px) 48vw, (max-width: 1600px) 42vw, 36vw" alt="Sala de estar com paleta natural e mobiliário contemporâneo" width="1200" height="1600" loading="lazy" decoding="async"><span class="work-label">Imagem de referência</span></div>
+            <div class="work-meta"><div><h3>Texturas para desacelerar</h3><p>Interiores · materiais naturais</p></div><span class="work-number">02</span></div>
+          </article>
+        </div>
+        <p class="work-disclaimer">Imagens de referência visual. Substituir pelas fotografias dos projetos do estúdio após a seleção do portfólio.</p>
+      </div>
+    </section>
+
+    <section class="services page-width" id="servicos" aria-labelledby="services-title">
+      <div class="services-top">
+          <div><span class="eyebrow">03 — O que fazemos</span><h2 class="section-heading" id="services-title">Arquitetura e interiores, <em>sob medida.</em></h2></div>
+        <p class="section-copy">Cada projeto parte das suas prioridades. Juntos, encontramos a escala de trabalho que transforma sua intenção em espaço.</p>
+      </div>
+      <div class="service-list">
+        <article class="service-row"><span class="service-number">01</span><h3>Arquitetura residencial</h3><p>Casas contemporâneas desenhadas para o terreno, a paisagem e as pessoas que vão chamar o lugar de seu.</p></article>
+        <article class="service-row"><span class="service-number">02</span><h3>Interiores sob medida</h3><p>Ambientes pensados com intenção — da organização dos espaços à escolha de materiais, luz e mobiliário.</p></article>
+        <article class="service-row"><span class="service-number">03</span><h3>Reforma com direção</h3><p>Uma leitura cuidadosa do que já existe para renovar, reorganizar e trazer mais sentido à casa.</p></article>
+      </div>
+    </section>
+
+    <section class="process-section" id="processo" aria-labelledby="process-title">
+      <div class="process-layout page-width">
+        <div class="process-intro"><span class="eyebrow">04 — Nosso processo</span><h2 class="section-heading" id="process-title">Um caminho claro, <em>etapa por etapa.</em></h2><p class="section-copy">Projetar junto fica mais leve quando cada etapa tem um propósito e você sabe o que vem a seguir.</p></div>
+        <div class="process-steps">
+          <article class="process-step"><span>01</span><div><h3>Escuta</h3><p>Uma conversa para entender o momento, os desejos e os desafios do espaço. É aqui que alinhamos expectativas e prioridades.</p></div></article>
+          <article class="process-step"><span>02</span><div><h3>Conceito</h3><p>Transformamos referências e necessidades em uma direção de projeto: linguagem, organização e atmosfera.</p></div></article>
+          <article class="process-step"><span>03</span><div><h3>Desenvolvimento</h3><p>O conceito ganha forma em soluções espaciais e escolhas que equilibram estética, função e viabilidade.</p></div></article>
+          <article class="process-step"><span>04</span><div><h3>Detalhamento</h3><p>Consolidamos as informações do projeto para que as próximas decisões aconteçam com mais segurança.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section page-width" id="contato" aria-labelledby="contact-title">
+      <div class="contact-layout">
+        <div class="contact-intro">
+          <span class="eyebrow">05 — Vamos começar</span>
+          <h2 class="section-heading" id="contact-title">Vamos conversar sobre <em>a sua casa.</em></h2>
+          <p class="section-copy">Conte um pouco sobre o que você tem em mente. Quando o número oficial estiver configurado, suas respostas abrirão uma mensagem pronta no WhatsApp.</p>
+          <div class="contact-detail"><span>Primeiro passo</span><p>Compartilhe o que você está planejando.</p></div>
+        </div>
+        <form class="contact-form" id="contact-form" method="post">
+          <div class="field-row">
+            <div class="field"><label for="name">Como podemos chamar você?</label><input id="name" name="name" type="text" autocomplete="name" placeholder="Seu nome" required></div>
+            <div class="field"><label for="city">Onde será o projeto?</label><input id="city" name="city" type="text" autocomplete="address-level2" placeholder="Cidade / estado" required></div>
+          </div>
+          <div class="field"><label for="project">O que você está planejando?</label><select id="project" name="project" required><option value="" disabled selected>Selecione uma opção</option><option>Construir uma casa</option><option>Reformar ou ampliar</option><option>Projetar os interiores</option><option>Ainda estou organizando as ideias</option></select></div>
+          <div class="field"><label for="message">O que gostaria de contar sobre o projeto?</label><textarea id="message" name="message" placeholder="Pode ser uma ideia, uma dúvida ou o momento em que você está."></textarea></div>
+          <div class="form-bottom"><p class="form-note">Seus dados não são armazenados neste site. O WhatsApp será ativado após configurar o número oficial.</p><button class="button-primary" id="send-whatsapp" type="button">Iniciar conversa <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button></div>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          <noscript><p class="form-note">Ative o JavaScript para preparar a mensagem. Seus dados não serão enviados automaticamente.</p></noscript>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-width">
+      <div class="footer-top">
+        <a class="brand" href="#inicio" aria-label="Ateliê Vão, início"><span class="brand-symbol" aria-hidden="true"></span><span><span class="brand-word">ateliê <span>vão</span></span><span class="brand-caption">arquitetura & interiores</span></span></a>
+        <nav class="footer-links" aria-label="Navegação do rodapé"><a href="#sobre">O estúdio</a><a href="#projetos">Projetos</a><a href="#processo">Processo</a><a href="#contato">Solicitar orçamento</a></nav>
+      </div>
+      <div class="footer-bottom"><span>© <span id="year"></span> Ateliê Vão. Todos os direitos reservados.</span><span>Arquitetura para viver com intenção.</span></div>
+      <p class="prototype-note">“Ateliê Vão” é um nome-conceito. As fotografias são referências visuais; substitua-as pelas imagens do estúdio antes de publicar.</p>
+    </div>
+  </footer>
+
+  <script>
+    // O briefing não incluiu o telefone. Informe DDI + DDD + número, somente dígitos.
+    const WHATSAPP_NUMBER = "";
+
+    function whatsappUrl(message) {
+      return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    }
+
+    const menuButton = document.querySelector(".menu-toggle");
+    const mainNav = document.querySelector(".main-nav");
+    function setMenuOpen(open, returnFocus = false) {
+      menuButton.setAttribute("aria-expanded", String(open));
+      menuButton.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+      mainNav.classList.toggle("is-open", open);
+      if (open) mainNav.querySelector("a").focus();
+      else if (returnFocus) menuButton.focus();
+    }
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+      setMenuOpen(!isOpen, isOpen);
+    });
+    mainNav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
+      const wasOpen = menuButton.getAttribute("aria-expanded") === "true";
+      setMenuOpen(false);
+      if (wasOpen) window.setTimeout(() => menuButton.focus({ preventScroll: true }), 0);
+    }));
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && menuButton.getAttribute("aria-expanded") === "true") {
+        setMenuOpen(false, true);
+      }
+    });
+
+    const form = document.querySelector("#contact-form");
+    const sendButton = document.querySelector("#send-whatsapp");
+
+    function startContact() {
+      if (!form.reportValidity()) return;
+      const status = document.querySelector("#form-status");
+      if (!/^\d{10,15}$/.test(WHATSAPP_NUMBER)) {
+        status.textContent = "O número oficial do estúdio ainda não foi configurado. A mensagem não foi enviada.";
+        return;
+      }
+      const data = new FormData(form);
+      const message = [
+        `Olá! Meu nome é ${data.get("name")}.`,
+        `Estou em ${data.get("city")} e quero conversar sobre: ${data.get("project").toLowerCase()}.`,
+        data.get("message") ? `Um pouco mais sobre o projeto: ${data.get("message")}` : "",
+        "Vim pelo site do Ateliê Vão."
+      ].filter(Boolean).join("\n\n");
+      status.textContent = "Abrindo uma conversa no WhatsApp…";
+      window.open(whatsappUrl(message), "_blank", "noopener,noreferrer");
+    }
+
+    sendButton.addEventListener("click", startContact);
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      startContact();
+    });
+    form.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" && event.target.matches('input[type="text"]') && !event.isComposing) {
+        event.preventDefault();
+        form.requestSubmit();
+      }
+    });
+
+    document.querySelector("#year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
